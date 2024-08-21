@@ -9,28 +9,3 @@ button:hover {
     color: white;
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-}
-
-.caption {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.image-container:hover .caption {
-    opacity: 1;
-}
