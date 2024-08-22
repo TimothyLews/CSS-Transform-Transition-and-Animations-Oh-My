@@ -9,34 +9,42 @@ button:hover {
     color: white;
 }
 
-.image-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px; /* Adjust as needed */
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.image-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
-}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust this width as needed */
+    margin: 0 auto;
+  }
+  
+  .caption {
+    position: relative;
+    width: 100%;
+  }
+  
+  .caption img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .caption div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; /* Start from the top of the container */
+    height: 100%; /* Full height of the image */
+    transform: translateY(100%); /* Initially position it below the view */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for both transform and opacity */
+  }
+  
+  .caption:hover div {
+    transform: translateY(0); /* Move to cover the image */
+    opacity: 1;
